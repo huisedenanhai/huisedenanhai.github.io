@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About | huisedenanhai</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        :root {
+            --bg-color: #0d1117;
+            --text-main: #c9d1d9;
+            --accent-blue: #58a6ff;
+            --card-bg: #161b22;
+            --card-hover: #1c2128;
+            --border-color: #30363d;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 60px 20px;
+        }
+
+        /* Hero Section */
+        .hero {
+            display: flex;
+            align-items: center;
+            gap: 40px;
+            margin-bottom: 60px;
+        }
+
+        .profile-pic {
+            width: 160px;
+            height: 160px;
+            border-radius: 50%;
+            border: 3px solid var(--accent-blue);
+            background-color: var(--card-bg);
+        }
+
+        .hero-info h1 {
+            font-size: 2.5rem;
+            margin: 0;
+            color: #ffffff;
+        }
+
+        .hero-info p {
+            font-size: 1.1rem;
+            color: var(--accent-blue);
+            margin: 5px 0 20px 0;
+            font-family: 'Courier New', Courier, monospace;
+        }
+
+        /* Tags */
+        .tag-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .tag {
+            background: #21262d;
+            padding: 4px 12px;
+            border-radius: 12px;
+            font-size: 0.85rem;
+            border: 1px solid var(--border-color);
+        }
+
+        /* Content Sections */
+        .section-title {
+            color: #ffffff;
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 10px;
+            margin: 40px 0 25px 0;
+        }
+
+        .bio {
+            font-size: 1.1rem;
+        }
+
+        strong {
+            color: #ffffff;
+        }
+
+        /* Project Grid */
+        .project-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+
+        .project-card {
+            background: var(--card-bg);
+            padding: 24px;
+            border-radius: 8px;
+            border: 1px solid var(--border-color);
+            text-decoration: none;
+            color: inherit;
+            display: flex;
+            flex-direction: column;
+            transition: all 0.2s ease-in-out;
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--accent-blue);
+            background-color: var(--card-hover);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+        }
+
+        .project-card h3 {
+            margin: 0;
+            color: var(--accent-blue);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 1.25rem;
+        }
+
+        .project-card h3::after {
+            content: "\f061"; /* FontAwesome arrow */
+            font-family: "Font Awesome 6 Free";
+            font-weight: 900;
+            font-size: 0.9rem;
+            opacity: 0.3;
+            transition: opacity 0.2s;
+        }
+
+        .project-card:hover h3::after {
+            opacity: 1;
+        }
+
+        .project-card p {
+            margin: 12px 0 0;
+            font-size: 0.95rem;
+            color: var(--text-main);
+        }
+
+        /* Footer */
+        footer {
+            margin-top: 80px;
+            text-align: center;
+            border-top: 1px solid var(--border-color);
+            padding-top: 40px;
+        }
+
+        .footer-socials {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin-bottom: 20px;
+        }
+
+        .social-icon {
+            color: var(--text-main);
+            font-size: 1.5rem;
+            transition: color 0.2s;
+            text-decoration: none;
+        }
+
+        .social-icon:hover {
+            color: var(--accent-blue);
+        }
+
+        .footer-credits {
+            font-size: 0.85rem;
+            color: #8b949e;
+        }
+
+        /* Responsive */
+        @media (max-width: 650px) {
+            .hero { flex-direction: column; text-align: center; }
+            .project-grid { grid-template-columns: 1fr; }
+            .tag-list { justify-content: center; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <header class="hero">
+        <img src="https://github.com/huisedenanhai.png" alt="huisedenanhai" class="profile-pic">
+        <div class="hero-info">
+            <h1>huisedenanhai</h1>
+            <p>> Graphics Programmer & Engine Dev</p>
+            <div class="tag-list">
+                <span class="tag">C++ / C#</span>
+                <span class="tag">Vulkan / OpenGL</span>
+                <span class="tag">Unity / Live2D</span>
+                <span class="tag">OCaml</span>
+            </div>
+            <p><b>This page is AI generated placeholder based on the github link. Contact me if you want more precise info.</b></p>
+        </div>
+    </header>
+
+    <section class="bio">
+        <h2 class="section-title">Overview</h2>
+        <p>
+            I am a developer focused on the intersection of real-time rendering, interactive media, and systems programming.
+            My work ranges from building custom <strong>Vulkan renderers</strong> to developing frameworks for
+            <strong>Visual Novels</strong> and <strong>Virtual YouTubers</strong>.
+        </p>
+        <p>
+            I enjoy diving deep into technical challenges—whether that's optimizing a spectral renderer,
+            designing a new shading language, or implementing node-based graph editors for real-time animation.
+        </p>
+    </section>
+
+    <section>
+        <h2 class="section-title">Pinned Projects</h2>
+        <div class="project-grid">
+            <a href="https://github.com/huisedenanhai/XLand" class="project-card" target="_blank">
+                <h3>XLand</h3>
+                <p>A Live2D VTuber application featuring an extensible node graph editor for motion binding. Built with Unity.</p>
+            </a>
+
+            <a href="https://github.com/huisedenanhai/aries-renderer" class="project-card" target="_blank">
+                <h3>aries-renderer</h3>
+                <p>A modern Vulkan-based renderer built to explore low-level graphics APIs and PBR workflows.</p>
+            </a>
+
+            <a href="https://github.com/huisedenanhai/Nova" class="project-card" target="_blank">
+                <h3>Nova</h3>
+                <p>A high-performance framework for Visual Novels and adventure games, designed for scalability.</p>
+            </a>
+
+            <a href="https://github.com/huisedenanhai/YASL" class="project-card" target="_blank">
+                <h3>YASL</h3>
+                <p>"Yet Another Shading Language" - exploring language design and compiler frontends using OCaml.</p>
+            </a>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-socials">
+            <a href="https://github.com/huisedenanhai" class="social-icon" title="GitHub" target="_blank">
+                <i class="fa-brands fa-github"></i>
+            </a>
+            <a href="mailto:huisedenanhai@qq.com" class="social-icon" title="Email">
+                <i class="fa-regular fa-envelope"></i>
+            </a>
+        </div>
+        <div class="footer-credits">
+            <p>&copy; 2025 huisedenanhai | Built with Precision</p>
+        </div>
+    </footer>
+</div>
+
+</body>
+</html>
